@@ -1,0 +1,731 @@
+/* Entire body styling. */
+body {
+    background-color: #e9e9e9;
+    font-family: Avenir, Verdana, sans-serif;
+    font-size: calc(21px + 12 * ((100vw - 300px) / 1300));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* The positioning and padding of the WorkIn logo. */
+.logo-image {
+    padding: 2px 20px 3px 20px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.switch-to-LED-button {
+    border: 1px gray solid;
+    border-radius: 15px;
+    background-color: #ffff4c;
+}
+
+/* The company slogan for different screen widths. */
+@media screen and (max-width:300px) {
+    #logo-text {
+        display: none;
+    }
+}
+
+@media screen and (min-width:301px) {
+    #logo-text {
+        float: left;
+        padding-top: 25px;
+    }
+}
+
+@media screen and (min-width:501px) {
+    #logo-text {
+        font-size: 50%;
+    }
+}
+
+@media screen and (max-width:501px) {
+    #logo-text {
+        font-size: 12px;
+    }
+
+    .logo-image {
+        padding-left: 2px;
+    }
+}
+
+
+/* Made buttons to control padding and vertical centering. */
+.button {
+    float: right;
+    padding: 30px 20px 0px 10px;
+    font-size: 17px;
+}
+
+@media screen and (min-width: 1070px) {
+    .button {
+        font-size: 20px;
+        padding: 30px 20px 0px 10px;
+    }
+}
+
+@media screen and (min-width: 1130px) {
+    .button {
+        padding: 30px 25px 0px 10px;
+    }
+}
+
+@media screen and (min-width: 1180px) {
+    .button {
+        font-size: 20px;
+        padding: 30px 33px 0px 10px;
+    }
+}
+
+/* Don't display the three-horizontal-barred hamburger. Only display it when
+   width is less than 1020. */
+@media screen and (min-width: 1021px) {
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    #logo-text {
+        padding-top: 25px;
+    }
+
+    .topnav a:not(#first-child):not(.hamburger), .sidenav {
+        display: none;
+    }
+
+    .topnav a.hamburger {
+        float: right;
+        padding: 25px 30px 10px 30px;
+    }
+
+    .sidenav {
+        z-index: 1;
+        right: 0;
+        height: 100%;
+        background-color: #000000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 30px;
+        position: fixed;
+    }
+
+    .sidenav a {
+        display: block;
+        font-size: calc(20px + 12 * ((100vw - 300px) / 1300));
+        transition: 0.3s;
+    }
+
+    .sidenav a:link, .sidenav a:visited {
+        color: #e9e9e9;
+    }
+
+    .sidenav a:hover, .sidenav a:active {
+        color: #47b075;
+    }
+
+    .sidenav a:link, .sidenav a:visited, .sidenav a:hover, .sidenav a:active {
+        text-decoration: none;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+
+    #navbar-footer, .sidenav a {
+        padding: 8px 15px 8px 32px;
+        text-align: left;
+    }
+
+    #navbar-footer {
+        font-size: calc(10px + 12 * ((100vw - 300px) / 1300));
+    }
+}
+
+/* Styling of the links. */
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: #47b075;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+a:active {
+    color: #FFFFFF;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+/* Styling of the sticky header once screen is scrolled down. */
+.sticky {
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/* The different sections of the website are table-row classes. */
+.table-row {
+    width: 80%;
+    padding: 80px 10% 18% 10%;
+}
+
+.black-background {
+    background-color: #191919;
+}
+
+.black2-background {
+    background-color: #2f2f2f;
+}
+
+.gray-background {
+    background-color: #e9e9e9;
+}
+
+.green-background {
+    background-color: #307850;
+}
+
+.slideshow {
+    display: none;
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    top: 0;
+}
+
+
+
+/* For mobile screens. */
+@media screen and (max-width:659px) {
+    .slideshow-container {
+        padding-top: 80px;
+    }
+
+    .introduction-text {
+        top: 30vh;
+        font-size: calc(27px + 12 * ((100vw - 300px) / 1300));
+    }
+}
+
+/* For desktop screens. */
+@media screen and (min-width:660px) {
+    .introduction-text {
+        font-size: calc(45px + 12 * ((100vw - 300px) / 1300));
+        top: 40vh;
+    }
+
+    .slideshow-container {
+        padding-top: 0;
+    }
+}
+
+.introduction-text {
+    color: white;
+    background-color: rgba(0,0,0,0.55);
+    width: 90%;
+    left: 5vw;
+    right: 5vw;
+    position: absolute;
+    padding: 3px 0px;
+    border-radius: 5px;
+}
+
+/* No display of the downward-pointing arrow when width is greater than 1011px
+   because it does not look nice! */
+@media screen and (max-width:1011px) {
+    .arrow-to-content {
+        display: none;
+    }
+}
+
+/* Display when screen greater than 1012px! */
+@media screen and (min-width:1012px) {
+    .arrow-to-content {
+        position: relative;
+        /* fn to calculate the height from the bottom of
+           the image given width. */
+        bottom: calc((2 / 5) * (100vw - 868px));
+    }
+
+    @keyframes bouncing {
+        0% {bottom: 0;}
+        50% {bottom: 20px;}
+        100% {bottom: 0;}
+    }
+
+    .arrow {
+        animation: bouncing 1s infinite ease-in-out;
+        left: 50%;
+        position: absolute;
+    }
+}
+
+/* All h2's have this styling. */
+h2 {
+    font-size: 100%;
+    padding: 20px 0px 0px 0px;
+}
+
+.lowbar {
+    font-size: 80%;
+    padding: 20px 0px 15px 0px;
+}
+
+h2, .lowbar {
+    color: #47b075;
+}
+
+h3 {
+    font-size: 80%;
+    padding: 20px 0px 0px 0px;
+    padding: 30px;
+}
+
+.white-text {
+    color: white;
+}
+
+.black-text {
+    color: black;
+}
+
+/* Distinct padding used for About Us section than the rest. */
+.about-us-paragraph {
+    padding: 20px 2px;
+    color: #d3d3d3;
+}
+
+.about-us-paragraph a:link, .about-us-paragraph a:visited,
+.why-LED-paragraph a:link, .why-LED-paragraph a:visited,
+.projects-list a:link, .projects-list a:visited {
+    color: #47b075;
+    text-decoration: underline;
+}
+
+.about-us-paragraph a:hover, .about-us-paragraph a:active,
+.why-LED-paragraph a:hover, .why-LED-paragraph a:active,
+.projects-list a:hover, .projects-list a:active {
+    text-decoration: none;
+}
+
+.table-row-why-LED {
+    width: 80%;
+    padding: 80px 10% 8% 10%;
+}
+
+.why-LED-paragraph {
+    text-align: left;
+}
+
+p .center {
+    text-align: center;
+}
+
+p {
+    color: #353839;
+    font-size: 73%;
+    padding: 20px 0px;
+}
+
+.one-third {
+    width: 32%;
+    font-size: 60%;
+    color: #47b075;
+    padding: 5px 4px 15px 4px;
+}
+
+@media screen and (max-width:808px) {
+    .one-third {
+        width: 42%;
+    }
+
+    .switch-to-LED-button {
+        float: none;
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .first-third {
+        margin-left: 3%;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .one-third {
+        font-size: 15px;
+    }
+}
+
+
+/* The Features and Benefits sub-section of Why LED section goes to two
+   icons per row. */
+@media screen and (max-width:900px) {
+    .one-fourth {
+        width: 46%;
+        padding: 2%;
+        font-size: 15px;        
+    }
+
+    .m-2 {
+        clear: left;
+    }
+}
+
+@media screen and (min-width:901px) and (max-width:1059px) {
+    .one-fourth {
+        width: 32%;
+        padding-bottom: 15px;
+        padding-left: 1%;
+        font-size: 60%;
+    }
+
+    .m-3 {
+        clear: left;
+    }
+}
+
+@media screen and (min-width:1060px) {
+    .one-fourth {
+        width: 23.5%;
+        padding-left: 0.5%;
+        padding-right: 0.75%;
+        padding-bottom: 25px;
+        font-size: 60%;
+    }
+
+    .m-4 {
+        clear: left;
+    }
+
+    .the-fourth {
+        clear: right;
+    }
+}
+
+.one-fourth {
+    color: #47b075;
+}
+
+.one-fourth:hover {
+    background-color: #efefef;
+}
+
+@media screen and (max-width:700px) {
+    .facts-img {
+        height: 40px;
+        width: 40px;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .facts-img {
+        height: 70px;
+        width: 70px;
+        padding: 15px;
+    }
+}
+
+/* Mobile friendly, responsive version of Products section. */
+/* (For phones/tablets) */
+@media screen and (max-width:899px) {
+    .table-row-products {
+        padding: 80px 5% 50px 5%;
+        width: 90%;
+    }
+
+    .product-box {
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+    }
+
+    .table-row-products, .product-box {
+        clear: both;
+    }
+
+    .product-description {
+        padding: 5px;
+    }
+
+    .product-box-1, .product-box-2, .product-box-3, .product-box-4,
+    .product-box-5, .product-box-6 {
+        border: white 1px solid;
+        border-left-style: none;
+        border-right-style: none;
+    }
+
+    .product-box-2, .product-box-3, .product-box-4, .product-box-5,
+    .product-box-6 {
+        border-top-style: none;
+    }
+
+    .product-more-padding {
+        padding: 40px 0px;
+    }
+}
+
+
+/* For desktop/laptop version of Products section. */
+@media screen and (min-width:900px) {
+    .table-row-products {
+        background-color: #191919;
+        width: 95%;
+        padding: 80px 2.5% 25px 2.5%;
+        clear: both;
+    }
+
+    .product-box {
+        width: 31.2%;
+        height: 350px;
+        float: left;
+        padding: 1% 1% 4% 1%;
+        border: white 1px solid;
+    }
+
+    .product-box-1, .product-box-3, .product-box-4, .product-box-6 {
+        border-left-style: none;
+    }
+
+    .product-box-1, .product-box-2, .product-box-3, .product-box-4,
+    .product-box-5, .product-box-6{
+        border-top-style: none;
+    }
+
+    .product-box-1, .product-box-3, .product-box-4, .product-box-6 {
+        border-right-style: none;
+    }
+
+    .product-box-4, .product-box-5, .product-box-6 {
+        border-bottom-style: none;
+    }
+
+    .product-box-3 {
+        clear: right;
+    }
+
+    .product-description {
+        padding: 10px 45px;
+    }
+}
+
+.products-paragraph {
+    padding: 0% 10% 5% 10%;
+    color: #e0eaea;
+}
+
+.product-box {
+    background-color: #191919;
+}
+
+.product-box:hover {
+    background-color: black;
+}
+
+.option-product-title {
+    color: white;
+    font-size: calc(33px + 12 * ((100vw - 300px) / 1300));
+    font-weight: 400;
+    padding-bottom: 5px;;
+}
+
+p .product-description {
+    color: white;
+    font-size: 60%;
+}
+
+ul.products-list {
+    color: #47b075;
+    font-size: 60%;
+    font-style: italic;
+    list-style: square;
+    text-align: left;
+    padding-left: 60px;
+}
+
+.clearfix {
+    clear: both;
+    background-color: inherit;
+}
+
+.yellow {
+    color: #ffffd9;
+    padding: 0px;
+}
+
+/* Mobile friendly responsive Projects section. */
+@media screen and (min-width:800px) {
+    ul.projects-list {
+        padding-left: 100px;
+    }
+}
+
+@media screen and (max-width:799px) and (min-width:500px){
+    ul.projects-list {
+        padding-left: 80px;
+    }
+}
+
+@media screen and (max-width:499px) {
+    ul.projects-list {
+        padding-left: 30px;
+    }
+}
+
+
+ul.projects-list {
+    color: black;
+    font-size: 70%;
+}
+
+
+/* Mobile friendly responsive Our Clients section. */
+/* (For phones and tablets) */
+@media screen and (max-width:1020px)  {
+    .suppliers-box {
+        font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
+        text-align: center;
+        height: 150px;
+        width: 200px;
+        padding-top: 30px;
+        margin: auto;
+        left: 50%;
+        width: 50%;
+    }
+
+    .suppliers-text {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:590px) {
+    .suppliers-box {
+        width: 100%;
+        padding-top: 0px;
+    }
+}
+
+/* Desktop/laptop Our Clients section. */
+@media screen and (min-width:1021px) {
+    .suppliers-box {
+        width: 27%;
+        height: 130px;
+        padding: 50px 20px 10px 20px;
+        text-align: center;
+        font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
+    }
+}
+
+.suppliers-paragraph {
+    color: #d3d3d3;
+}
+
+.suppliers-box {
+        float: left;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.border {
+    border-radius: 10px;
+}
+
+/* Making map responsive and mobile friendly. */
+@media screen and (max-width:750px) {
+    .table-row-contact-us {
+        width: 100%;
+        padding: 80px 0px 10px 0px;
+    }
+
+    .mapbox {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:955px) {
+    .contact-info-box {
+        font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
+        text-align: center;
+        padding: 40px 0 0 0;
+    }
+}
+
+@media screen and (min-width:751px) {
+    .table-row-contact-us {
+        width: 100%;
+        padding: 80px 0 500px 0;
+    }
+}
+
+@media screen and (min-width:751px) and (max-width:955px) {
+    .mapbox {
+        height: 350px;
+        width: 80%;
+        padding: 0px 10% 0px 10%
+    }
+}
+
+/* For desktop/laptop version of website. */
+@media screen and (min-width:956px) {
+    .contact-info-box {
+        font-size: 70%;
+        padding: 0px 0px 0px 5%;
+        width: 25%;
+    }
+
+    .mapbox {
+        height: 320px;
+        padding: 30px 10px;
+        width: 50%;
+    }
+
+    .contact-info-box, .mapbox {
+        float: left;
+        margin: auto;
+    }
+}
+
+.footer {
+    padding: 0px 0px;
+}
+
+.footer-text {
+    color: white;
+    font-size: 50%;
+}
+
+.introduction-text, h2, .lowbar, h3, p, .one-third, .one-fourth, .product-box,
+    .footer {
+    text-align: center;
+}
+
+.logo-image, .one-third, .one-fourth {
+    float: left;
+}
+
+.table-row, .lowbar, .about-us-paragraph, .why-LED-paragraph,
+    .products-paragraph, .ref, .suppliers-paragraph, .footer {
+    clear: both;
+}
