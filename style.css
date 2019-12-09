@@ -10,51 +10,14 @@ body {
     padding: 0;
 }
 
-/* The positioning and padding of the WorkIn logo. */
+/* The positioning and padding of Phills Phire Phoods logo. */
 .logo-image {
-    padding: 2px 20px 3px 20px;
+    padding: 2px 20px 3px 0px;
 }
 
 img {
     vertical-align: middle;
 }
-
-.switch-to-LED-button {
-    border: 1px gray solid;
-    border-radius: 15px;
-    background-color: #ffff4c;
-}
-
-/* The company slogan for different screen widths. */
-@media screen and (max-width:300px) {
-    #logo-text {
-        display: none;
-    }
-}
-
-@media screen and (min-width:301px) {
-    #logo-text {
-        float: left;
-        padding-top: 25px;
-    }
-}
-
-@media screen and (min-width:501px) {
-    #logo-text {
-        font-size: 50%;
-    }
-}
-
-@media screen and (max-width:501px) {
-    #logo-text {
-        font-size: 12px;
-    }
-
-    .logo-image {
-        padding-left: 2px;
-    }
-}
-
 
 /* Made buttons to control padding and vertical centering. */
 .button {
@@ -83,8 +46,7 @@ img {
     }
 }
 
-/* Don't display the three-horizontal-barred hamburger. Only display it when
-   width is less than 1020. */
+/* Don't display the three-horizontal-barred hamburger. Only display it when width is less than 1020. */
 @media screen and (min-width: 1021px) {
     .hamburger {
         display: none;
@@ -92,10 +54,6 @@ img {
 }
 
 @media screen and (max-width: 1020px) {
-    #logo-text {
-        padding-top: 25px;
-    }
-
     .topnav a:not(#first-child):not(.hamburger), .sidenav {
         display: none;
     }
@@ -172,7 +130,7 @@ a:link, a:visited, a:hover, a:active {
 /* Styling of the sticky header once screen is scrolled down. */
 .sticky {
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
     top: 0;
     z-index: 1;
@@ -187,10 +145,6 @@ a:link, a:visited, a:hover, a:active {
 
 .black-background {
     background-color: #191919;
-}
-
-.black2-background {
-    background-color: #2f2f2f;
 }
 
 .gray-background {
@@ -211,8 +165,6 @@ a:link, a:visited, a:hover, a:active {
     margin: 0;
     top: 0;
 }
-
-
 
 /* For mobile screens. */
 @media screen and (max-width:659px) {
@@ -250,7 +202,7 @@ a:link, a:visited, a:hover, a:active {
 }
 
 /* No display of the downward-pointing arrow when width is greater than 1011px
-   because it does not look nice! */
+because it does not look nice! */
 @media screen and (max-width:1011px) {
     .arrow-to-content {
         display: none;
@@ -261,15 +213,14 @@ a:link, a:visited, a:hover, a:active {
 @media screen and (min-width:1012px) {
     .arrow-to-content {
         position: relative;
-        /* fn to calculate the height from the bottom of
-           the image given width. */
+        /* fn to calculate the height from the bottom of the image given width. */
         bottom: calc((2 / 5) * (100vw - 868px));
     }
 
     @keyframes bouncing {
-        0% {bottom: 0;}
-        50% {bottom: 20px;}
-        100% {bottom: 0;}
+        0% { bottom: 0; }
+        50% { bottom: 20px; }
+        100% { bottom: 0; }
     }
 
     .arrow {
@@ -290,13 +241,12 @@ h2 {
     padding: 20px 0px 15px 0px;
 }
 
-h2, .lowbar {
+h2, .lowbar, .nice-green {
     color: #47b075;
 }
 
 h3 {
     font-size: 80%;
-    padding: 20px 0px 0px 0px;
     padding: 30px;
 }
 
@@ -315,25 +265,25 @@ h3 {
 }
 
 .about-us-paragraph a:link, .about-us-paragraph a:visited,
-.why-LED-paragraph a:link, .why-LED-paragraph a:visited,
+.phoods-paragraph a:link, .phoods-paragraph a:visited,
 .projects-list a:link, .projects-list a:visited {
     color: #47b075;
     text-decoration: underline;
 }
 
 .about-us-paragraph a:hover, .about-us-paragraph a:active,
-.why-LED-paragraph a:hover, .why-LED-paragraph a:active,
+.phoods-paragraph a:hover, .phoods-paragraph a:active,
 .projects-list a:hover, .projects-list a:active {
     text-decoration: none;
 }
 
-.table-row-why-LED {
+.table-row-phoods {
     width: 80%;
     padding: 80px 10% 8% 10%;
 }
 
-.why-LED-paragraph {
-    text-align: left;
+.phood-division-title {
+    font-size: calc(33px + 12 * ((100vw - 300px) / 1300));
 }
 
 p .center {
@@ -346,220 +296,181 @@ p {
     padding: 20px 0px;
 }
 
-.one-third {
-    width: 32%;
-    font-size: 60%;
-    color: #47b075;
-    padding: 5px 4px 15px 4px;
-}
-
-@media screen and (max-width:808px) {
-    .one-third {
-        width: 42%;
-    }
-
-    .switch-to-LED-button {
-        float: none;
-        width: 60%;
-        margin-left: 20%;
-    }
-
-    .first-third {
-        margin-left: 3%;
-    }
-}
-
-@media screen and (max-width:500px) {
-    .one-third {
-        font-size: 15px;
-    }
-}
-
-
-/* The Features and Benefits sub-section of Why LED section goes to two
-   icons per row. */
-@media screen and (max-width:900px) {
-    .one-fourth {
-        width: 46%;
-        padding: 2%;
-        font-size: 15px;        
-    }
-
-    .m-2 {
-        clear: left;
-    }
-}
-
-@media screen and (min-width:901px) and (max-width:1059px) {
-    .one-fourth {
-        width: 32%;
-        padding-bottom: 15px;
-        padding-left: 1%;
-        font-size: 60%;
-    }
-
-    .m-3 {
-        clear: left;
-    }
-}
-
-@media screen and (min-width:1060px) {
-    .one-fourth {
-        width: 23.5%;
-        padding-left: 0.5%;
-        padding-right: 0.75%;
-        padding-bottom: 25px;
-        font-size: 60%;
-    }
-
-    .m-4 {
-        clear: left;
-    }
-
-    .the-fourth {
-        clear: right;
-    }
-}
-
-.one-fourth {
-    color: #47b075;
-}
-
-.one-fourth:hover {
-    background-color: #efefef;
-}
-
-@media screen and (max-width:700px) {
-    .facts-img {
-        height: 40px;
-        width: 40px;
-        padding: 10px;
-    }
-}
-
-@media screen and (min-width:700px) {
-    .facts-img {
-        height: 70px;
-        width: 70px;
-        padding: 15px;
-    }
-}
-
-/* Mobile friendly, responsive version of Products section. */
+/* Mobile friendly, responsive version of the Events section. */
 /* (For phones/tablets) */
 @media screen and (max-width:899px) {
-    .table-row-products {
+    .table-row-events {
         padding: 80px 5% 50px 5%;
         width: 90%;
     }
 
-    .product-box {
+    .event-box {
         width: 90%;
         margin: auto;
         padding: 20px;
     }
 
-    .table-row-products, .product-box {
+    .table-row-events, .event-box {
         clear: both;
     }
 
-    .product-description {
+    .event-description {
         padding: 5px;
     }
 
-    .product-box-1, .product-box-2, .product-box-3, .product-box-4,
-    .product-box-5, .product-box-6 {
+    .event-box-1, .event-box-2, .event-box-3, .event-box-4,
+    .event-box-5, .event-box-6 {
         border: white 1px solid;
         border-left-style: none;
         border-right-style: none;
     }
 
-    .product-box-2, .product-box-3, .product-box-4, .product-box-5,
-    .product-box-6 {
+    .event-box-2, .event-box-3, .event-box-4, .event-box-5,
+    .event-box-6 {
         border-top-style: none;
     }
 
-    .product-more-padding {
+    .event-more-padding {
         padding: 40px 0px;
     }
 }
 
 
-/* For desktop/laptop version of Products section. */
-@media screen and (min-width:900px) {
-    .table-row-products {
-        background-color: #191919;
-        width: 95%;
-        padding: 80px 2.5% 25px 2.5%;
+/* Mobile friendly, responsive version of Phoods section. */
+/* (For phones/tablets) */
+@media screen and (max-width:1041px) {
+    .table-row-phoods {
+        padding: 80px 5% 50px 5%;
+        width: 90%;
+    }
+
+    .phood-box {
+        width: 90%;
+        margin: auto;
         clear: both;
+        padding: 20px;
     }
 
-    .product-box {
-        width: 31.2%;
-        height: 350px;
-        float: left;
-        padding: 1% 1% 4% 1%;
+    .phood-description {
+        padding: 5px;
+    }
+
+    .phood-box-1, .phood-box-2, .phood-box-3 {
         border: white 1px solid;
-    }
-
-    .product-box-1, .product-box-3, .product-box-4, .product-box-6 {
         border-left-style: none;
-    }
-
-    .product-box-1, .product-box-2, .product-box-3, .product-box-4,
-    .product-box-5, .product-box-6{
-        border-top-style: none;
-    }
-
-    .product-box-1, .product-box-3, .product-box-4, .product-box-6 {
         border-right-style: none;
     }
 
-    .product-box-4, .product-box-5, .product-box-6 {
+    .phood-box-2, .phood-box-3 {
+        border-top-style: none;
+    }
+
+    .phood-more-padding {
+        padding: 40px 0px;
+    }
+}
+
+/* For desktop/laptop version of Phoods section. */
+@media screen and (min-width:1042px) {
+    .table-row-phoods {
+        width: 95%;
+        padding: 80px 2.5% 25px 2.5%;
+    }
+
+    .phood-box {
+        width: 31.2%;
+        float: left;
+        padding: 2% 1% 4% 1%;
+        border: white 1px solid;
         border-bottom-style: none;
+        border-top-style: none;
     }
 
-    .product-box-3 {
-        clear: right;
+    .phood-box-2, .phood-box-3 {
+        border-left-style: none;
     }
 
-    .product-description {
+    .phood-description {
         padding: 10px 45px;
     }
+
+    #db2 {
+        padding: 47px 0px;
+        color: #191919;
+    }
+
+    #db3 {
+        padding: 23px 0px;
+        color: #191919;
+    }
+
+    #ref {
+        padding: 0px;
+        margin: 0px;
+        color: #191919;
+    }
 }
 
-.products-paragraph {
+.phoods-paragraph {
     padding: 0% 10% 5% 10%;
-    color: #e0eaea;
 }
 
-.product-box {
-    background-color: #191919;
+.phood-box:hover {
+    background-color: #efefef;
 }
 
-.product-box:hover {
-    background-color: black;
+.option-phood-title {
+    color: white;
+    font-size: calc(33px + 12 * ((100vw - 300px) / 1300));
 }
 
-.option-product-title {
+.phood-description {
+    color: white;
+    font-size: 60%;
+}
+
+.yellow {
+    color: #ffffd9;
+}
+
+ul {
+    color: #b2e0e0;
+    text-align: left;
+    list-style: none;
+    padding-left: 40px;
+    font-size: 60%;
+}
+
+ul li:before {
+    content: '🥑';
+}
+
+ul.indent {
+    list-style-position: outside;
+}
+
+.option-event-title {
     color: white;
     font-size: calc(33px + 12 * ((100vw - 300px) / 1300));
     font-weight: 400;
     padding-bottom: 5px;;
 }
 
-p .product-description {
-    color: white;
+p .event-description {
     font-size: 60%;
 }
 
-ul.products-list {
+ul.events-list {
     color: #47b075;
     font-size: 60%;
     font-style: italic;
     list-style: square;
     text-align: left;
     padding-left: 60px;
+}
+
+ul.indent {
+    list-style-position: outside;
 }
 
 .clearfix {
@@ -640,7 +551,7 @@ ul.projects-list {
 }
 
 .suppliers-box {
-        float: left;
+    float: left;
 }
 
 .shadow {
@@ -716,7 +627,7 @@ ul.projects-list {
     font-size: 50%;
 }
 
-.introduction-text, h2, .lowbar, h3, p, .one-third, .one-fourth, .product-box,
+.introduction-text, h2, .lowbar, h3, p, .one-third, .one-fourth, .event-box,
     .footer {
     text-align: center;
 }
@@ -726,6 +637,6 @@ ul.projects-list {
 }
 
 .table-row, .lowbar, .about-us-paragraph, .why-LED-paragraph,
-    .products-paragraph, .ref, .suppliers-paragraph, .footer {
+    .events-paragraph, .ref, .suppliers-paragraph, .footer {
     clear: both;
 }
