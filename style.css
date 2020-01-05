@@ -668,12 +668,12 @@ ul.projects-list {
     font-size: 50%;
 }
 
-.introduction-text, h2, .lowbar, h3, p, .one-third, .one-fourth, .event-box,
+.introduction-text, h2, .lowbar, h3, p, .event-box,
     .footer {
     text-align: center;
 }
 
-.logo-image, .one-third, .one-fourth {
+.logo-image {
     float: left;
 }
 
