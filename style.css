@@ -467,7 +467,7 @@ p {
 
 .phood-description {
     color: white;
-    font-size: 60%;
+    font-size: 70%;
 }
 
 .yellow {
@@ -479,7 +479,7 @@ ul {
     text-align: left;
     list-style: none;
     padding-left: 40px;
-    font-size: 60%;
+    font-size: 70%;
 }
 
 ul li:before {
