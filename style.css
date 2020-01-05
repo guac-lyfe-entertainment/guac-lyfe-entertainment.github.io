@@ -64,7 +64,7 @@ img {
     }
 
     .sidenav {
-        z-index: 1;
+        z-index: 100;
         right: 0;
         height: 100%;
         background-color: #000000;
@@ -127,13 +127,33 @@ a:link, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+/* Styling of the phoods links */
+a.phoods-link:link, a.phoods-link:visited {
+    color: #47b075;
+    font-weight: 500;
+}
+
+a.phoods-link:hover {
+    color: #47b075;
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+a.phoods-link:active {
+    color: #FFFFFF;
+}
+
+a.phoods-link:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
 /* Styling of the sticky header once screen is scrolled down. */
 .sticky {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.75);
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
     top: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
 }
 
@@ -159,12 +179,33 @@ a:link, a:visited, a:hover, a:active {
     display: none;
 }
 
-.slideshow-container {
+.slideshow-container, #photos, .photos-section {
     width: 100%;
     height: 100%;
     margin: 0;
     top: 0;
 }
+
+/* Making photos bigger for mobile devices .*/
+@media screen and (max-width:910px) {
+    .extra-photos {
+        width: 50%;
+    }
+}
+
+
+/* Having 3 photos per line in bigger screens. */
+@media screen and (min-width:911px) {
+    .extra-photos {
+        width: 33.33%;
+    }
+}
+
+.extra-photos {
+    float: left;
+    height: auto;
+}
+
 
 /* For mobile screens. */
 @media screen and (max-width:659px) {
@@ -277,7 +318,7 @@ h3 {
     text-decoration: none;
 }
 
-.table-row-phoods {
+.table-row-phoods, .table-row-events {
     width: 80%;
     padding: 80px 10% 8% 10%;
 }
@@ -300,14 +341,14 @@ p {
 /* (For phones/tablets) */
 @media screen and (max-width:899px) {
     .table-row-events {
-        padding: 80px 5% 50px 5%;
+        padding: 80px 0px 50px 0px;
         width: 90%;
     }
 
     .event-box {
-        width: 90%;
+        width: 100%;
         margin: auto;
-        padding: 20px;
+        padding: 0;
     }
 
     .table-row-events, .event-box {
@@ -320,6 +361,7 @@ p {
 
     .event-box-1, .event-box-2, .event-box-3, .event-box-4,
     .event-box-5, .event-box-6 {
+        text-align: center;
         border: white 1px solid;
         border-left-style: none;
         border-right-style: none;
@@ -372,7 +414,7 @@ p {
 
 /* For desktop/laptop version of Phoods section. */
 @media screen and (min-width:1042px) {
-    .table-row-phoods {
+    .table-row-phoods, .table-row-events {
         width: 95%;
         padding: 80px 2.5% 25px 2.5%;
     }
@@ -434,7 +476,7 @@ p {
 }
 
 ul {
-    color: #b2e0e0;
+    color: #47b075;
     text-align: left;
     list-style: none;
     padding-left: 40px;
