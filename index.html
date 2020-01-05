@@ -243,9 +243,7 @@
             <h2>Events</h2>
             <p class="lowbar">&#x2594;</p>
 
-            <p class="about-us-paragraph">
-                We've been all over the place.
-            </p>
+            <p class="about-us-paragraph">We've been all over the place.</p>
 
             <div class="clearfix">
                 <div class="event-box event-box-1">
@@ -364,24 +362,21 @@
             document.getElementById("mySidenav").style.width = "0";
         };
 
-
         let removeEAppsBtns = () => {
             let widgetRemoveBtns = document.querySelectorAll("a[href^='https://elfsight.com/instagram-feed-instashow/?utm_source=websites&utm_medium=clients&utm_content=instagram-feed&utm_term=undefined&utm_campaign=free-widget'");
-            for (let i = 0; i < widgetRemoveBtns.length; i++) {
-                console.log(widgetRemoveBtns.item(i));
-                widgetRemoveBtns.item(i).remove();
-            }
+            removeItems(widgetRemoveBtns);
             
             let widgetXBtns = document.getElementsByClassName('eapps-remove-link');
-            for (let i = 0; i < widgetXBtns.length; i++) {
-                widgetXBtns.item(i).remove()
-            }
+            removeItems(widgetXBtns);
 
             let widgetTitle = document.getElementsByClassName('eapps-instagram-feed-title');
-            for (let i = 0; i < widgetTitle.length; i++) {
-                widgetTitle.item(i).remove()
+            removeItems(widgetTitle);
+        };
+
+        let removeItems = htmlColl => {
+            for (let i = 0; i < htmlColl.length; i++) {
+                htmlColl.item(i).remove();
             }
-            
         };
         
         setTimeout(removeEAppsBtns, 1000);
